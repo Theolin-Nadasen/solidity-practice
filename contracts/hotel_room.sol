@@ -24,13 +24,22 @@ contract HotelRoom{
         _;
     }
 
-    function book() public payable onlyWhileVacant payed(2 ether){
+    modifier  onlyOwner(){
+        require(msg.sender == owner);
+        _;
+    }
+
+    function book() public payable onlyWhileVacant payed(200 wei){
         currentState = RoomStates.Occupied;
 
         (bool sent, bytes memory data ) = owner.call{value : msg.value}("");
         require(sent == true);
 
         emit Occupy(msg.sender, msg.value);
+    }
+
+    function AllowRenting() public onlyOwner{
+        currentState = RoomStates.Vacant;
     }
 
 }
