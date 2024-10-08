@@ -510,11 +510,11 @@
 	},
 	"sources": {
 		"contracts/CappedToken.sol": {
-			"keccak256": "0x04727f0b9cffc89fba67cd0b17c61672695cc05834b4336bb0a21a91a98ac098",
+			"keccak256": "0x99536405da3960c2906c6fb41f8dd3a5106e4ab3cb7afa3b9ed9bd561fb4716a",
 			"license": "MIT",
 			"urls": [
-				"bzz-raw://8f01f8b1e2b5b4ee38d267992bfe4d37dc1d149d784e7fe1197988e491782d3c",
-				"dweb:/ipfs/QmcnZ8rNEd6KrQwrFqstUDTzsggqs8pGjoVqtGDXVP77uk"
+				"bzz-raw://c1081c654e01ab3ab271dfd26acdaaf5d7f4b434974e7774315055d9148fad08",
+				"dweb:/ipfs/QmVfSPWkvLQyVDP2cvftmjKK6VHEG1mawJ75XJVpQzs5o1"
 			]
 		},
 		"https://github.com/OpenZeppelin/openzeppelin-contracts/blob/master/contracts/interfaces/draft-IERC6093.sol": {

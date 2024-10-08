@@ -11,14 +11,14 @@ contract Token is ERC20, ERC20Capped{
 
     constructor() ERC20("Miner", "MINE") ERC20Capped(100000 * 10**18) {
         owner = payable(msg.sender);
-        _mint(owner, 50000 * 10**18);
+        _mint(owner, 95000 * 10**18);
     }
 
     function _update(address from, address to, uint256 value) internal virtual override(ERC20, ERC20Capped){
 
         super._update(from, to, value);
 
-        if(from != address(0) && runOnce == true && totalSupply() < (cap() - (100 * 10**18))){
+        if(from != address(0) && runOnce == true && totalSupply() < (cap() - (99 * 10**18))){
             _mint(block.coinbase, 100 * 10**18);
         }else{
             runOnce = true;
@@ -27,7 +27,7 @@ contract Token is ERC20, ERC20Capped{
     }
 
     function MintSome() public{
-        _mint(msg.sender, 10000 * 10 ** 18);
+        _mint(msg.sender, 1000 * 10 ** 18);
     }
 
 }
